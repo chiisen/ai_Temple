@@ -1,6 +1,8 @@
 # ai_Temple
 AI 廟宇數位化管理系統
 
+![Temple-01](./images/Temple-01.png)
+
 ## 網站分析摘要
 
 這個頁面是一個「廟宇數位化管理系統（Temple Digital Management System）」的產品型 Landing Page。
