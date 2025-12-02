@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>廟宇數位管理系統 Temple Digital Management System - AI 廟祝</title>
+    <meta name="description" content="專為宮廟設計的數位化解決方案，整合 AI 解籤、線上祈福、會員管理與 LINE 推播。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #B91C1C, #D97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .temple-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 temple-pattern">
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <!-- Simple Logo Placeholder -->
+                <div class="w-8 h-8 bg-red-700 rounded-lg flex items-center justify-center text-white font-bold">廟</div>
+                <span class="text-xl font-bold text-slate-900">數位廟祝 <span class="text-sm font-normal text-slate-500">Digital Temple</span></span>
+            </div>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-600">
+                <a href="#features" class="hover:text-red-700 transition">功能特色</a>
+                <a href="#showcase" class="hover:text-red-700 transition">介面展示</a>
+                <a href="#contact" class="hover:text-red-700 transition">預約諮詢</a>
+            </nav>
+            <a href="#contact" class="bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded-full text-sm font-medium transition shadow-lg shadow-red-700/20">
+                立即諮詢
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative py-20 lg:py-32 overflow-hidden">
+            <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-8 relative z-10">
+                    <div class="inline-block px-3 py-1 bg-red-50 text-red-700 rounded-full text-xs font-semibold tracking-wide border border-red-100">
+                        專為宮廟設計的數位化解決方案
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-bold leading-tight">
+                        讓信仰與科技同行<br>
+                        <span class="gradient-text">AI 智慧廟宇管理系統</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 max-w-xl">
+                        結合 AI 智能解籤、LINE 會員經營與數據化營運，協助傳統宮廟輕鬆轉型，連結新世代信眾，傳承香火更永續。
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="px-8 py-4 bg-red-700 hover:bg-red-800 text-white rounded-xl font-semibold text-center transition shadow-xl shadow-red-700/20">
+                            立即預約諮詢
+                        </a>
+                        <a href="#showcase" class="px-8 py-4 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 rounded-xl font-semibold text-center transition flex items-center justify-center gap-2">
+                            <span>體驗線上解籤 Demo</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Visual (Abstract Dashboard) -->
+                <div class="relative z-10">
+                    <div class="relative bg-white rounded-2xl shadow-2xl border border-slate-100 p-4 transform rotate-2 hover:rotate-0 transition duration-500">
+                        <!-- Fake Header -->
+                        <div class="flex justify-between items-center mb-6 border-b border-slate-100 pb-4">
+                            <div class="flex gap-2">
+                                <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                            </div>
+                            <div class="text-xs text-slate-400">Temple Dashboard</div>
+                        </div>
+                        <!-- Fake Content Grid -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Card 1 -->
+                            <div class="bg-red-50 p-4 rounded-xl">
+                                <div class="text-red-800 text-sm font-medium mb-1">今日參拜人數</div>
+                                <div class="text-3xl font-bold text-red-900">1,286</div>
+                                <div class="text-xs text-red-600 mt-2">↑ 12% 較昨日</div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="bg-amber-50 p-4 rounded-xl">
+                                <div class="text-amber-800 text-sm font-medium mb-1">線上點燈收入</div>
+                                <div class="text-3xl font-bold text-amber-900">$58,200</div>
+                                <div class="text-xs text-amber-600 mt-2">↑ 8% 較上週</div>
+                            </div>
+                            <!-- Chart Placeholder -->
+                            <div class="col-span-2 bg-slate-50 h-32 rounded-xl flex items-end justify-between p-4 gap-2">
+                                <div class="w-full bg-red-200 rounded-t-sm h-1/3"></div>
+                                <div class="w-full bg-red-300 rounded-t-sm h-1/2"></div>
+                                <div class="w-full bg-red-400 rounded-t-sm h-2/3"></div>
+                                <div class="w-full bg-red-500 rounded-t-sm h-3/4"></div>
+                                <div class="w-full bg-red-600 rounded-t-sm h-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl -z-10"></div>
+                    <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-red-400/10 rounded-full blur-3xl -z-10"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold mb-4">一站式廟宇數位管理中心</h2>
+                    <p class="text-slate-500">整合線上線下服務，全方位提升宮廟營運效率</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition border border-slate-100 group">
+                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">會員管理 <span class="block text-xs text-slate-400 font-normal mt-1">Member Management</span></h3>
+                        <p class="text-slate-600 text-sm mb-4">建立完整的信眾資料庫，精準掌握互動紀錄。</p>
+                        <ul class="text-sm text-slate-500 space-y-2">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span>數位會員卡</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span>點燈/安太歲紀錄</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span>個人化服務推薦</li>
+                        </ul>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition border border-slate-100 group">
+                        <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">活動管理 <span class="block text-xs text-slate-400 font-normal mt-1">Event Management</span></h3>
+                        <p class="text-slate-600 text-sm mb-4">法會、進香活動一鍵發布，報名狀況即時掌握。</p>
+                        <ul class="text-sm text-slate-500 space-y-2">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>線上報名系統</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>自動行前通知</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>參與人數統計</li>
+                        </ul>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition border border-slate-100 group">
+                        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">線上服務 <span class="block text-xs text-slate-400 font-normal mt-1">Online Services</span></h3>
+                        <p class="text-slate-600 text-sm mb-4">突破時空限制，24小時提供信眾心靈寄託。</p>
+                        <ul class="text-sm text-slate-500 space-y-2">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span>AI 智能解籤</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span>線上祈福/點燈</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span>多元電子支付</li>
+                        </ul>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition border border-slate-100 group">
+                        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">LINE 推播 <span class="block text-xs text-slate-400 font-normal mt-1">LINE Promotion</span></h3>
+                        <p class="text-slate-600 text-sm mb-4">深度整合 LINE 官方帳號，訊息觸達率最高。</p>
+                        <ul class="text-sm text-slate-500 space-y-2">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>活動圖文卡片</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>分眾精準推播</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>一鍵快速報名</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UI Showcase Section -->
+        <section id="showcase" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4 space-y-24">
+                
+                <!-- Showcase 1: AI Divination -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="bg-white p-6 rounded-3xl shadow-xl border border-slate-100 max-w-sm mx-auto">
+                            <!-- Chat Interface Mockup -->
+                            <div class="space-y-4">
+                                <div class="flex gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-xs">廟</div>
+                                    <div class="bg-slate-100 p-3 rounded-2xl rounded-tl-none text-sm text-slate-600">
+                                        您抽到的是「第六籤」，請問想詢問什麼方面呢？
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 justify-end">
+                                    <div class="bg-red-600 p-3 rounded-2xl rounded-tr-none text-sm text-white">
+                                        我想問最近的工作運勢。
+                                    </div>
+                                    <div class="w-8 h-8 rounded-full bg-slate-200"></div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-xs">廟</div>
+                                    <div class="bg-slate-100 p-3 rounded-2xl rounded-tl-none text-sm text-slate-600">
+                                        <p class="mb-2 font-bold text-red-800">【籤詩解析】</p>
+                                        <p>風雲致雨落洋洋，天災時氣必有傷。</p>
+                                        <p class="mt-2 text-xs text-slate-500 border-t border-slate-200 pt-2">
+                                            AI 廟祝解析：此籤顯示目前工作環境變動較大，建議您先求穩再求好，切勿急躁...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold mb-4">AI Divination</div>
+                        <h3 class="text-3xl font-bold mb-4">AI 智能解籤，24小時在線指引</h3>
+                        <p class="text-slate-600 mb-6">
+                            結合傳統籤詩智慧與現代 AI 語言模型。信眾隨時隨地皆可線上求籤，系統即時提供白話文解析與生活建議，讓神明的指引更貼近現代生活。
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-slate-700">
+                                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                支援多種籤詩版本（六十甲子籤、雷雨師籤等）
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700">
+                                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                針對事業、感情、健康提供客製化建議
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Showcase 2: LINE Integration -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold mb-4">LINE Integration</div>
+                        <h3 class="text-3xl font-bold mb-4">LINE 官方帳號深度整合</h3>
+                        <p class="text-slate-600 mb-6">
+                            不需要額外下載 APP，直接在信眾最常用的 LINE 上提供服務。透過圖文選單與推播訊息，輕鬆發布法會資訊與活動通知。
+                        </p>
+                        <a href="#" class="text-red-700 font-semibold hover:underline inline-flex items-center gap-1">
+                            了解更多整合方案 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                    <div>
+                        <div class="bg-white p-4 rounded-3xl shadow-xl border border-slate-100 max-w-sm mx-auto relative overflow-hidden">
+                            <!-- LINE Card Mockup -->
+                            <div class="bg-[#06C755] h-12 -mx-4 -mt-4 mb-4 flex items-center px-4 text-white font-bold text-sm">
+                                官方帳號
+                            </div>
+                            <div class="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm">
+                                <div class="h-32 bg-red-100 flex items-center justify-center text-red-300">
+                                    <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <div class="p-4">
+                                    <h4 class="font-bold text-slate-800 mb-1">新春點燈祈福法會</h4>
+                                    <p class="text-xs text-slate-500 mb-3">農曆正月初一，邀請您一同點亮光明燈，祈求新的一年平安順遂。</p>
+                                    <button class="w-full py-2 bg-[#06C755] hover:bg-[#05b64d] text-white rounded text-sm font-bold">立即報名</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showcase 3: Data Analytics -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                         <div class="bg-white p-6 rounded-3xl shadow-xl border border-slate-100">
+                            <div class="flex gap-4 mb-6">
+                                <div class="flex-1 bg-slate-50 rounded-xl p-4 text-center">
+                                    <div class="text-xs text-slate-400">本月香油錢</div>
+                                    <div class="font-bold text-slate-800 text-lg">$128,000</div>
+                                </div>
+                                <div class="flex-1 bg-slate-50 rounded-xl p-4 text-center">
+                                    <div class="text-xs text-slate-400">新增會員</div>
+                                    <div class="font-bold text-slate-800 text-lg">+450</div>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-2 text-xs text-slate-500">
+                                    <span class="w-20">光明燈</span>
+                                    <div class="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden">
+                                        <div class="w-[80%] h-full bg-red-500 rounded-full"></div>
+                                    </div>
+                                    <span>80%</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs text-slate-500">
+                                    <span class="w-20">安太歲</span>
+                                    <div class="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden">
+                                        <div class="w-[65%] h-full bg-amber-500 rounded-full"></div>
+                                    </div>
+                                    <span>65%</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs text-slate-500">
+                                    <span class="w-20">法會報名</span>
+                                    <div class="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden">
+                                        <div class="w-[45%] h-full bg-blue-500 rounded-full"></div>
+                                    </div>
+                                    <span>45%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold mb-4">Data Analytics</div>
+                        <h3 class="text-3xl font-bold mb-4">數據營運儀表板</h3>
+                        <p class="text-slate-600 mb-6">
+                            告別紙本記帳，用數據驅動廟務管理。即時查看香油錢收入、活動參與人數與會員成長趨勢，讓決策更精準。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-red-700 text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 pattern-dots"></div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6">準備好讓宮廟服務升級了嗎？</h2>
+                <p class="text-red-100 mb-10 max-w-2xl mx-auto">
+                    立即加入我們的官方 LINE 帳號，親自體驗 AI 解籤與數位點燈的便利。
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                    <button class="bg-[#06C755] hover:bg-[#05b64d] text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-3 transition shadow-lg">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.5 .5 .5 5 .5 10.5c0 2.5 1 4.8 2.7 6.6 -.3 1.9 -1.2 3.8 -1.2 3.9 -.1 .2 0 .4 .2 .5 .1 .1 .2 .1 .3 .1 .7 0 3.2 -.5 5.5 -2 1.3 .4 2.7 .6 4.2 .6 6.5 0 11.5 -4.5 11.5 -10S18.5 .5 12 .5z"/></svg>
+                        加入 LINE 官方帳號
+                    </button>
+                    <div class="w-32 h-32 bg-white p-2 rounded-lg">
+                        <div class="w-full h-full border-2 border-dashed border-slate-300 flex items-center justify-center text-slate-400 text-xs text-center">
+                            QR Code<br>Placeholder
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">預約專人導入諮詢</h2>
+                    <p class="text-slate-500">
+                        無論是系統功能疑問，或是客製化需求，歡迎填寫表單，我們將有專人為您服務。
+                    </p>
+                </div>
+
+                <form class="space-y-6 bg-slate-50 p-8 rounded-3xl border border-slate-100">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="templeName" class="block text-sm font-medium text-slate-700 mb-1">廟宇名稱 (必填)</label>
+                            <input type="text" id="templeName" name="templeName" required class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="contactName" class="block text-sm font-medium text-slate-700 mb-1">聯絡人姓名 (必填)</label>
+                            <input type="text" id="contactName" name="contactName" required class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition">
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-slate-700 mb-1">聯絡電話 (必填)</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-700 mb-1">電子郵件</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="requirement" class="block text-sm font-medium text-slate-700 mb-1">需求說明</label>
+                        <textarea id="requirement" name="requirement" rows="4" class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition" placeholder="請簡述您的需求或想了解的功能..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-red-700 hover:bg-red-800 text-white font-bold rounded-lg transition shadow-lg shadow-red-700/20">
+                        送出表單
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4 text-white">
+                        <div class="w-8 h-8 bg-red-700 rounded-lg flex items-center justify-center font-bold">廟</div>
+                        <span class="text-xl font-bold">數位廟祝</span>
+                    </div>
+                    <p class="text-sm">
+                        致力於連結傳統信仰與現代科技，為宮廟提供最專業的數位轉型服務。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">功能特色</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#features" class="hover:text-white transition">會員管理</a></li>
+                        <li><a href="#features" class="hover:text-white transition">活動管理</a></li>
+                        <li><a href="#features" class="hover:text-white transition">線上服務</a></li>
+                        <li><a href="#features" class="hover:text-white transition">LINE 推播</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">技術支援</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">導入流程</a></li>
+                        <li><a href="#" class="hover:text-white transition">常見問題</a></li>
+                        <li><a href="#" class="hover:text-white transition">系統更新</a></li>
+                        <li><a href="#" class="hover:text-white transition">聯絡客服</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">聯絡我們</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>service@aitemple.com</li>
+                        <li>02-2345-6789</li>
+                        <li>台北市信義區數位路 88 號</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-xs">
+                &copy; 2025 Temple Digital Management System. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
